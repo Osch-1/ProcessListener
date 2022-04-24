@@ -1,0 +1,10 @@
+How to use process_listener.ps1
+
+1. Define name of your process_listener
+   For example: if you testing out SampleProcess project, the name will match with .exe file
+   So it will be SampleProcess
+2. Run ps1 script in the next way: process_listener.ps1 $ProcessName, where $ProcessName - process you want to listen to and stop pc(localhost) on it's termination
+
+Behaviour:
+  If process with $ProcessName doesn't exist on script execution time you will see notification about this situation
+  Othrwise it will in cyclically try to get-process and if on some step it won't be found pc(localhost) will be stopped
